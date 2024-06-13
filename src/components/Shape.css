@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  gap: 10px;
+
+  &.processing {
+    .box {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: solid 1px red;
+  cursor: pointer;
+  transition: background 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &.selected {
+    background-color: red;
+    cursor: default;
+  }
+}
